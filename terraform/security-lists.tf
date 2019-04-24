@@ -25,14 +25,4 @@ resource "oci_core_security_list" "SecurityList" {
       min = "22"
     }
   }
-
-  ingress_security_rules {
-    protocol = "${local.tcp_protocol}"
-    source   = "${local.anywhere}"
-
-    tcp_options {
-      max = "8529"
-      min = "8529"
-    }
-  }
 }
